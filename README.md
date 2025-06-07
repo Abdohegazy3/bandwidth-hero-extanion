@@ -58,7 +58,7 @@ npm -v
 When you have `node` and `npm` available, get the latest source code from GitHub:
 
 ```
-git clone https://github.com/ayastreb/bandwidth-hero.git
+git clone https://github.com/Abdohegazy3/bandwidth-hero-extanion.git
 cd bandwidth-hero/
 ```
 
