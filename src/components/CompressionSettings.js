@@ -2,17 +2,19 @@ import React from 'react'
 import { Form, Input, Checkbox, Dropdown, Button } from 'semantic-ui-react'
 import defaults from '../defaults'
 
-export default ({ convertBw, compressionLevel, onConvertBwChange, onCompressionLevelChange, isWebpSupported }) => {
+export default ({ convertBw, compressionLevel, onConvertBwChange, onCompressionLevelChange }) => {
   const compressionToText = (description, value) => {
-    const extension = isWebpSupported ? 'WEBP' : 'JPG';
-    return `${description} compression (${extension} ${value})`;
+    return `${description} compression (JPEG ${value})`;
   };
+  
   const compressionLevelOptions = [
     { key: 80, value: 80, text: compressionToText('Low', 80) },
     { key: 60, value: 60, text: compressionToText('Medium', 60) },
     { key: 40, value: 40, text: compressionToText('High', 40) },
-    { key: 20, value: 20, text: compressionToText('Extreme', 20) }
+    { key: 20, value: 20, text: compressionToText('Extreme', 20) },
+    { key: 10, value: 10, text: compressionToText('Ultra', 10) }
   ]
+
   return (
     <div>
       <div>
